@@ -1,0 +1,142 @@
+:root {
+  --kolor-akcentu: #d35400;
+  --kolor-tla: #f4f4f6;
+  --kolor-karty: #ffffff;
+  --kolor-tekstu: #1e1e1e;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: var(--kolor-tla);
+  color: var(--kolor-tekstu);
+}
+
+header, footer {
+  margin-bottom: 1.5rem;
+}
+
+/* menu: flexbox z zawijaniem */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: var(--kolor-karty);
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+a {
+  color: var(--kolor-akcentu);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* stany dla linków i przycisku */
+a:hover, button:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--kolor-akcentu);
+  outline-offset: 2px;
+}
+
+/* katalog: css grid - domyślnie 1 kolumna poniżej 768px */
+.katalog {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.katalog > h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+/* wspólna klasa dla kart */
+.karta {
+  background-color: var(--kolor-karty);
+  padding: 1.25rem;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+}
+
+/* obrazy mieszczą się w kontenerze i zachowują proporcje */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* tabela parametrów */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+caption {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+th, td {
+  border: 1px solid #cccccc;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+th {
+  background-color: var(--kolor-tla);
+}
+
+/* formularz mieszczący się w widoku mobilnym */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.6rem;
+  font: inherit;
+  border: 1px solid #999999;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 0.5rem;
+  background-color: var(--kolor-akcentu);
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* widok od 768px: 3 kolumny w katalogu */
+@media (min-width: 768px) {
+  .katalog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

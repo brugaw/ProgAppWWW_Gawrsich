@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rowerowy - Zapytaj o produkt</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sklep Rowerowy</h1>
+        <nav aria-label="Menu główne">
+            <a href="index.html">Katalog</a>
+            <a href="produkt.html">Produkt</a>
+            <a href="kontakt.html" aria-current="page">Kontakt</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="karta">
+            <h2>Formularz zapytania o produkt</h2>
+            <p>Formularz demonstracyjny. Dane pojawią się w adresie strony; zapytanie nie zostanie zapisane ani wysłane e-mailem.</p>
+
+            <form method="get" action="kontakt.html">
+                <label for="email">Twój adres e-mail (wymagane, format nazwa@domena.pl):</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="produkt">Wybierz model roweru (wymagane):</label>
+                <select id="produkt" name="produkt" required>
+                    <option value="">Wybierz produkt</option>
+                    <option value="trek-slash-8">Trek</option>
+                    <option value="canyon-spectral-29">Canyon</option>
+                    <option value="santa-cruz-nomad">Santa Cruz</option>
+                </select>
+
+                <label for="ilosc">Liczba sztuk (wymagane, od 1 do 5):</label>
+                <input type="number" id="ilosc" name="ilosc" min="1" max="5" step="1" required>
+
+                <label for="wiadomosc">Wiadomość (wymagane, od 10 do 500 znaków):</label>
+                <textarea id="wiadomosc" name="wiadomosc" minlength="10" maxlength="500" rows="4" required></textarea>
+
+                <button type="submit">Sprawdź zapytanie</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy 10.2026 Programowanie Aplikacji www - Lab 1</p>
+    </footer>
+</body>
+</html>
