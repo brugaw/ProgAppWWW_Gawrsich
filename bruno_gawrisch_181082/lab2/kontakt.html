@@ -22,7 +22,7 @@
     <main>
         <section class="karta">
             <h2>Formularz zapytania o produkt</h2>
-            <p>Formularz demonstracyjny. Dane pojawią się w adresie strony; zapytanie nie zostanie zapisane ani wysłane e-mailem.</p>
+            <p>Podgląd lokalny. Formularz nie wysyła wiadomości.</p>
 
             <form method="get" action="kontakt.html">
                 <label for="email">Twój adres e-mail (wymagane, format nazwa@domena.pl):</label>
@@ -40,10 +40,20 @@
                 <input type="number" id="ilosc" name="ilosc" min="1" max="5" step="1" required>
 
                 <label for="wiadomosc">Wiadomość (wymagane, od 10 do 500 znaków):</label>
+                <p id="blad-wiad" hidden></p>
                 <textarea id="wiadomosc" name="wiadomosc" minlength="10" maxlength="500" rows="4" required></textarea>
 
                 <button type="submit">Sprawdź zapytanie</button>
             </form>
+            
+            <p id="info-wycena">Wprowadź dane, a wyświetli się tu łaczna wartość</p>
+            <section id="podglad" hidden>
+                <h3>Twoje zapytanie:</h3>
+                <p>Rower: <span id="p-rower"></span></p>
+                <p>Sztuk: <span id="p-ilosc"></span></p>
+                <p>Do zapłaty: <span id="p-cena"></span></p>
+                <p>Treść: <span id="p-tresc"></span></p>
+            </section>
         </section>
     </main>
 

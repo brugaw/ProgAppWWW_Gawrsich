@@ -11,6 +11,10 @@
 <body>
     <header>
         <h1>Rowerowy Sklep</h1>
+        
+        <input type="search" id="szukaj" placeholder="Szukaj ">
+        <p id="licznik" aria-live="polite"></p>
+
         <nav aria-label="Menu glowne">
             <a href="index.html" aria-current="page">Katalog</a>
             <a href="produkt.html">Produkt</a>
@@ -44,14 +48,15 @@
                 <p><strong> Cena: 17 649 PLN</strong></p>
             </article>
         </section>
+
+        <p class="czas">
+            <span id="wyswietlacz-zegara">Aktualizacja czasu...</span>
+            <button type="button" id="zegar-start" aria-pressed="true">Start zegara</button>
+            <button type="button" id="zegar-stop" aria-pressed="false">Stop zegara</button>
+        </p>
     </main>
 
     <footer>
-        <section class="karta">
-            <h2>Czas: </h2>
-            <p id="wyswietlacz-zegara">Aktualizacja czasu...</p>
-            <p> <button type="button" id="zegar-start" aria-pressed="true">Start zegara</button></p>
-            <p> <button type="button" id="zegar-stop" aria-pressed="false">Stop zegara</button></p>
         <p>&copy 10.2026 Programowanie Aplikacji www - Lab 2</p>
     </footer>
 </body>
