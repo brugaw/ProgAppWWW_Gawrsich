@@ -1,4 +1,4 @@
-# Dokumentacja projektu - Lab 3 jQuery i AJAX
+# Dokumentacja projektu - Lab 4 PHP formularze i sesja
 
 
 ## 1. Instrukcja uruchomienia projektu
