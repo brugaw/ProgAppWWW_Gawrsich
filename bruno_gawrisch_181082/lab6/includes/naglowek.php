@@ -15,9 +15,10 @@
     <header>
         <h1>Rowerowy (wersja PHP)</h1>
         <nav aria-label="Menu główne">
-            <a href="index.html">Katalog</a>
-            <a href="html/produkt.html">Produkt</a>
-            <a href="html/kontakt.html">Kontakt</a>
+            <a href="index.php?idp=glowna">Strona Główna</a>
+            <a href="index.php?idp=produkt">Produkt</a>
+            <a href="index.php?idp=kontakt">Kontakt</a>
+            <a href="index.php?idp=filmy">Filmy Wideo</a>
             <a href="lab4.php" aria-current="page">Katalog PHP</a>
 
             <a> <button type="button" id="przycisk-motywu" aria-pressed="false">Tryb Ciemny</button> </a>
